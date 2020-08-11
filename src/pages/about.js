@@ -13,14 +13,39 @@ export default function About({ data }) {
         <Header headerText={`About ${data.site.siteMetadata.title}`} />
         <p>Founders</p>
         <User
-          username="CaoBao Do"
-          avarta="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-          excerpt="I'm CaoBao. Lorem ipsum dolor sit amet, consectetur adipisicing"
+          username="Quynh Do"
+          avarta="https://i.pravatar.cc/300?name=quynh-do"
+          excerpt="I'm Quynh Do. Lorem ipsum dolor sit amet, consectetur adipisicing"
         />
         <User
-          username="Anh Son Tran Duc"
-          avarta="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-          excerpt="I'm Son Tran. Lorem ipsum dolor sit amet, consectetur adipisicing"
+          username="Kien Tran"
+          avarta="https://i.pravatar.cc/300?name=kien-tran"
+          excerpt="I'm Kien Tran. Lorem ipsum dolor sit amet, consectetur adipisicing"
+        />
+        <User
+          username="Badu"
+          avarta="https://i.pravatar.cc/300?name=badu"
+          excerpt="I'm Badu. Lorem ipsum dolor sit amet, consectetur adipisicing"
+        />
+        <User
+          username="Duy Hung"
+          avarta="https://i.pravatar.cc/300?name=duy-hung"
+          excerpt="I'm Duy Hung. Lorem ipsum dolor sit amet, consectetur adipisicing"
+        />
+        <User
+          username="Nguyen LTD"
+          avarta="https://i.pravatar.cc/300?name=nguyen-ltd"
+          excerpt="I'm Nguyen. Lorem ipsum dolor sit amet, consectetur adipisicing"
+        />
+        <User
+          username="Hoang Say"
+          avarta="https://i.pravatar.cc/300?name=hoang-say"
+          excerpt="I'm Say. Lorem ipsum dolor sit amet, consectetur adipisicing"
+        />
+        <User
+          username="Thinh Ng"
+          avarta="https://i.pravatar.cc/300?name=thinhnp"
+          excerpt="I'm Thinh Nguyen. Lorem ipsum dolor sit amet, consectetur adipisicing"
         />
       </Container>
     </Layout>

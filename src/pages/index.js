@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import Header from "../components/header"
@@ -9,24 +9,31 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Header headerText="Social Feeds" />
-      <p>Most quality news</p>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
-          <h3
+          <Link
+            to={node.fields.slug}
             css={css`
-              margin-bottom: ${rhythm(1 / 4)};
+              text-decoration: none;
+              color: inherit;
             `}
           >
-            {node.frontmatter.title}{" "}
-            <span
+            <h3
               css={css`
-                color: #bbb;
+                margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              - {node.frontmatter.date}
-            </span>
-          </h3>
+              {node.frontmatter.title}{" "}
+              <span
+                css={css`
+                  color: #bbb;
+                `}
+              >
+                - {node.frontmatter.date}
+              </span>
+            </h3>
+          </Link>
           <img
             src={`https://source.unsplash.com/random/400x200?nature,life,water,${node.id}`}
             alt=""
@@ -51,6 +58,9 @@ export const query = graphql`
             title
             author
             date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
           }
           excerpt
         }
